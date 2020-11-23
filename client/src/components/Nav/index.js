@@ -35,3 +35,5 @@ return (
   </nav>
 )
 }
+
+export default Nav;
