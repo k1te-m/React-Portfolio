@@ -1,5 +1,6 @@
 // Dependencies
 const express = require('express');
+const mongoose = require("mongoose");
 const routes = require('./routes');
 
 // Express instance
@@ -20,6 +21,9 @@ if (process.env.NODE_ENV === 'production') {
 
 // API and View Routes
 app.use(routes);
+
+// Mongo DB Connection
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio");
 
 // Start the server
 app.listen(PORT, () => {
