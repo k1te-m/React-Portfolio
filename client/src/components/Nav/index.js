@@ -29,7 +29,7 @@ return (
             target="_blank" rel="noreferrer">Resume</a>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" href="/">About</Link>
+          <Link className="nav-link" to="/">About</Link>
         </li>
       </ul>
     </div>
