@@ -1,34 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
 
 return (
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Kevin Miller</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <Link className="navbar-brand" to="/">Kevin Miller</Link>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <Link className="nav-link" to="/contact">Contact</Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/portfolio">Portfolio</a>
+        <li className="nav-item">
+          <Link className="nav-link" to="/portfolio">Portfolio</Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/k1te-m" target="_blank">GitHub</a>
+        <li className="nav-item">
+          <a className="nav-link" href="https://github.com/k1te-m" target="_blank" rel="noreferrer">GitHub</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.linkedin.com/in/kmiller29/" target="_blank">LinkedIn</a>
+        <li className="nav-item">
+          <a className="nav-link" href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">LinkedIn</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://drive.google.com/file/d/1PJlN82yMOQarqMybW3sqvzhSk-l7f5mk/view"
-            target="_blank">Resume</a>
+        <li className="nav-item">
+          <a className="nav-link" href="https://drive.google.com/file/d/1PJlN82yMOQarqMybW3sqvzhSk-l7f5mk/view"
+            target="_blank" rel="noreferrer">Resume</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/">About</a>
+        <li className="nav-item">
+          <Link className="nav-link" href="/">About</Link>
         </li>
       </ul>
     </div>
