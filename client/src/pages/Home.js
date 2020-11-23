@@ -12,7 +12,7 @@ function Home() {
         <div className="col">
           <img
             className="float-left pr-3 pb-3"
-            src="./me2.jpg"
+            src="./images/me2.jpg"
             width="62.5%"
             id="me"
           />
