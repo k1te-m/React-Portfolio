@@ -17,8 +17,10 @@ function Contact() {
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log(messageObject);
+    let messageObj = messageObject;
+    console.log(messageObj);
     if (messageObject.name && messageObject.email && messageObject.message) {
-      API.sendMessage(messageObject)
+      API.sendMessage(messageObj)
         .then(() => {
           setMessageObject({
             ...messageObject,
