@@ -2,6 +2,6 @@ import axios from "axios";
 
 export default {
     getRepos: function() {
-        return axios.get("/api/repos");
+        return axios.get("/api/portfolio");
     }
 }
