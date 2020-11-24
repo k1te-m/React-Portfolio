@@ -17,18 +17,14 @@ function Contact() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if (messageObject.name && messageObject.email && messageObject.message) {
-      API.sendMessage({
-        name: messageObject.name,
-        email: messageObject.email,
-        message: messageObject.message,
-      })
+      API.sendMessage(messageObject)
         .then(() => {
-          // setMessageObject({
-          //   ...messageObject,
-          //   name: "",
-          //   email: "",
-          //   message: "",
-          // });
+          setMessageObject({
+            ...messageObject,
+            name: "",
+            email: "",
+            message: "",
+          });
           console.log(messageObject);
         })
         .catch((err) => console.log(err));
