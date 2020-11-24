@@ -44,7 +44,7 @@ function Contact() {
             <div className="form-row">
               <div className="form-group col-12">
                 <label htmlFor="name">Name</label>
-                <input className="form-control" id="name" placeholder="Name" name="name" onChange={handleInputChange}/>
+                <input className="form-control" id="name" placeholder="Name" name="name" onChange={handleInputChange} value={messageObject.name}/>
               </div>
               <div className="form-group col-12">
                 <label htmlFor="email">Email</label>
@@ -54,6 +54,7 @@ function Contact() {
                   placeholder="name@example.com"
                   name="email"
                   onChange={handleInputChange}
+                  value={messageObject.email}
                 />
               </div>
               <div className="form-group col-12">
@@ -64,6 +65,7 @@ function Contact() {
                   rows="3"
                   name="message"
                   onChange={handleInputChange}
+                  value={messageObject.message}
                 ></textarea>
               </div>
               <button
