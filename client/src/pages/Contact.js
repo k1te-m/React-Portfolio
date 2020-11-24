@@ -23,12 +23,13 @@ function Contact() {
         message: messageObject.message,
       })
         .then(() => {
-          setMessageObject({
-            ...messageObject,
-            name: "",
-            email: "",
-            message: "",
-          });
+          // setMessageObject({
+          //   ...messageObject,
+          //   name: "",
+          //   email: "",
+          //   message: "",
+          // });
+          console.log(messageObject);
         })
         .catch((err) => console.log(err));
     }
