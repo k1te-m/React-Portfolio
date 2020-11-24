@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const portfolioRoutes = require("./repos");
-const messageRoutes = require("./message");
+const messageRoutes = require("./messages");
 
 // api routes
 router.use("/repos", portfolioRoutes);
