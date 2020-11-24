@@ -1,6 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import API from "../utils/API";
 
 function Contact() {
+  const [messageObject, setMessageObject] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
+
+  function handleInputChange(event) {
+    const { name, value } = event.target
+    setMessageObject({...messageObject, [name]: value})
+    console.log(messageObject);
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (messageObject.name && messageObject.email && messageObject.message) {
+      API.sendMessage({
+        name: messageObject.name,
+        email: messageObject.email,
+        message: messageObject.message,
+      })
+        .then(() => {
+          setMessageObject({
+            ...messageObject,
+            name: "",
+            email: "",
+            message: "",
+          });
+        })
+        .catch((err) => console.log(err));
+    }
+  }
+
+
   return (
     <div className="container" id="contactMe">
       <div className="row">
@@ -10,7 +44,7 @@ function Contact() {
             <div className="form-row">
               <div className="form-group col-12">
                 <label htmlFor="name">Name</label>
-                <input className="form-control" id="name" placeholder="Name" />
+                <input className="form-control" id="name" placeholder="Name" name="name" onChange={handleInputChange}/>
               </div>
               <div className="form-group col-12">
                 <label htmlFor="email">Email</label>
@@ -18,6 +52,8 @@ function Contact() {
                   className="form-control"
                   id="email"
                   placeholder="name@example.com"
+                  name="email"
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="form-group col-12">
@@ -26,6 +62,8 @@ function Contact() {
                   className="form-control"
                   id="textArea"
                   rows="3"
+                  name="message"
+                  onChange={handleInputChange}
                 ></textarea>
               </div>
               <button
@@ -33,6 +71,7 @@ function Contact() {
                 className="btn-lg btn-warning mb-5"
                 id="subButton"
                 data-target="#messageModal"
+                onClick={handleFormSubmit}
               >
                 Submit
               </button>
