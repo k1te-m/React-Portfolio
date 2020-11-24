@@ -16,22 +16,21 @@ function Contact() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (messageObject.name && messageObject.email && messageObject.message) {
-      API.sendMessage({
-        name: messageObject.name,
-        email: messageObject.email,
-        message: messageObject.message,
+
+    API.sendMessage({
+      name: messageObject.name,
+      email: messageObject.email,
+      message: messageObject.message,
+    })
+      .then(() => {
+        setMessageObject({
+          ...messageObject,
+          name: "",
+          email: "",
+          message: "",
+        });
       })
-        .then(() => {
-          setMessageObject({
-            ...messageObject,
-            name: "",
-            email: "",
-            message: "",
-          });
-        })
-        .catch((err) => console.log(err));
-    }
+      .catch((err) => console.log(err));
   }
 
 
