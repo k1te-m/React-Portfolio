@@ -23,7 +23,12 @@ if (process.env.NODE_ENV === 'production') {
 app.use(routes);
 
 // Mongo DB Connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 
 // Start the server
 app.listen(PORT, () => {
