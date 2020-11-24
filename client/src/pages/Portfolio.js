@@ -16,7 +16,6 @@ function Portfolio() {
     getRepos();
   }, [])
 
-  console.log(repoState);
 
   return (
     <div className="container">
