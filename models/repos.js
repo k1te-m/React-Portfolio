@@ -7,7 +7,7 @@ const repoSchema = new Schema({
     imageURL: {type: String}
 })
 
-const Repo = mongoose.model("Repos", repoSchema);
+const Repo = mongoose.model("Repo", repoSchema);
 
 module.exports = Repo;
 
