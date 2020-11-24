@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import API from "../utils/API";
 
+
 function Contact() {
   const [messageObject, setMessageObject] = useState({
     name: "",
@@ -11,28 +12,27 @@ function Contact() {
   function handleInputChange(event) {
     const { name, value } = event.target
     setMessageObject({...messageObject, [name]: value})
-    console.log(messageObject);
   }
 
   function handleFormSubmit(event) {
     event.preventDefault();
-
-    API.sendMessage({
-      name: messageObject.name,
-      email: messageObject.email,
-      message: messageObject.message,
-    })
-      .then(() => {
-        setMessageObject({
-          ...messageObject,
-          name: "",
-          email: "",
-          message: "",
-        });
+    if (messageObject.name && messageObject.email && messageObject.message) {
+      API.sendMessage({
+        name: messageObject.name,
+        email: messageObject.email,
+        message: messageObject.message,
       })
-      .catch((err) => console.log(err));
+        .then(() => {
+          setMessageObject({
+            ...messageObject,
+            name: "",
+            email: "",
+            message: "",
+          });
+        })
+        .catch((err) => console.log(err));
+    }
   }
-
 
   return (
     <div className="container" id="contactMe">
