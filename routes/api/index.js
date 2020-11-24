@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const portfolioRoutes = require("./portfolio");
+const portfolioRoutes = require("./repos");
 
-// generic routes
-router.use("/portfolio", portfolioRoutes);
+// repo routes
+router.use("/repos", portfolioRoutes);
 
 module.exports = router;
