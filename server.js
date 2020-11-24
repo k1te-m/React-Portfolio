@@ -11,13 +11,14 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 );
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 // If our node environment is production we will serve up our static assets from the build folder
 if (process.env.NODE_ENV === "production") {
