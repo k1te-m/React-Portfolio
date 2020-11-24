@@ -9,11 +9,11 @@ function Contact() {
           <form id="contactBox">
             <div className="form-row">
               <div className="form-group col-12">
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
                 <input className="form-control" id="name" placeholder="Name" />
               </div>
               <div className="form-group col-12">
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                   className="form-control"
                   id="email"
@@ -21,7 +21,7 @@ function Contact() {
                 />
               </div>
               <div className="form-group col-12">
-                <label for="textArea">Message</label>
+                <label htmlFor="textArea">Message</label>
                 <textarea
                   className="form-control"
                   id="textArea"
@@ -39,7 +39,7 @@ function Contact() {
             </div>
           </form>
 
-          <div className="modal" tabindex="-1" id="messageModal" role="dialog">
+          <div className="modal" tabIndex="-1" id="messageModal" role="dialog">
             <div className="modal-dialog" role="document">
               <div className="modal-content">
                 <div className="modal-header">
