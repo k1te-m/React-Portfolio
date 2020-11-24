@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import API from "../utils/API";
 
 function Portfolio() {
-  API.getRepos().then(function(response) {
-    console.log(response);
-  });
+
+  const getRepos = () => {
+    API.getRepos().then(function(response) {
+      console.log(response);
+    })
+  }
+  useEffect(() => {
+    getRepos();
+  })
 
   return (
     <div className="container">
