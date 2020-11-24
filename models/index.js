@@ -1,4 +1,4 @@
 module.exports = {
     Message: require("./message"),
-    Repo: require("./repos")
+    Repo: require("./repo")
 }
