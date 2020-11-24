@@ -18,11 +18,7 @@ function Contact() {
     event.preventDefault();
     console.log(messageObject);
     if (messageObject.name && messageObject.email && messageObject.message) {
-      API.sendMessage({
-        name: messageObject.name,
-        email: messageObject.email,
-        message: messageObject.message
-      })
+      API.sendMessage(messageObject)
         .then(() => {
           setMessageObject({
             ...messageObject,
