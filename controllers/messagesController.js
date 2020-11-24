@@ -2,7 +2,6 @@ const db = require("../models");
 
 module.exports = {
   sendMessage: function (req, res) {
-      console.log(req.res);
     db.Message.create(req.body)
       .then((results) => {
         res.json(results);
