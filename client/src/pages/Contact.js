@@ -24,7 +24,7 @@ function Contact() {
         email: messageObject.email,
         message: messageObject.message
       })
-        .then(() => {
+        .then((res) => {
           setMessageObject({
             ...messageObject,
             name: "",
@@ -41,67 +41,28 @@ function Contact() {
       <div className="row">
         <div className="col-12">
           <h2 className="border-bottom pb-3 pt-3">Contact</h2>
-          <form id="contactBox" encType="multipart/form-data" method="post">
+          <form id="contactBox">
             <div className="form-row">
-              {/* <div className="form-group col-12">
-                <label htmlFor="name">Name</label>
-                <input className="form-control" id="name" placeholder="Name" name="name" onChange={handleInputChange} value={messageObject.name}/>
-              </div> */}
               <Input 
                 onChange={handleInputChange}
                 name="name"
-                placeholder="Name"
+                placeholder="Example McExampleFace"
                 value={messageObject.name}
-                id="name"
               />
-              {/* <div className="form-group col-12">
-                <label htmlFor="email">Email</label>
-                <input
-                  className="form-control"
-                  id="email"
-                  placeholder="name@example.com"
-                  name="email"
-                  onChange={handleInputChange}
-                  value={messageObject.email}
-                />
-              </div> */}
               <Input 
                 onChange={handleInputChange}
                 name="email"
                 placeholder="example@example.com"
                 value={messageObject.email}
-                id="email"
               />
-              {/* <div className="form-group col-12">
-                <label htmlFor="textArea">Message</label>
-                <textarea
-                  className="form-control"
-                  id="textArea"
-                  rows="3"
-                  name="message"
-                  onChange={handleInputChange}
-                  value={messageObject.message}
-                ></textarea>
-              </div> */}
               <TextArea 
                 onChange={handleInputChange}
                 name="message"
-                placeholder="Enter your message here."
+                placeholder="Enter your message here..."
                 value={messageObject.message}
-                id="message"
               />
-              {/* <button
-                type="submit"
-                className="btn-lg btn-warning mb-5"
-                id="subButton"
-                data-target="#messageModal"
-                onClick={handleFormSubmit}
-              >
-                Submit
-              </button> */}
               <FormBtn
                 onClick={handleFormSubmit}
-                value={messageObject}
               >
                 Submit
               </FormBtn>
