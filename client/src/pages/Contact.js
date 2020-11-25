@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API from "../utils/API";
+import { Input, TextArea, FormBtn } from "../components/Form";
 
 
 function Contact() {
@@ -40,13 +41,20 @@ function Contact() {
       <div className="row">
         <div className="col-12">
           <h2 className="border-bottom pb-3 pt-3">Contact</h2>
-          <form id="contactBox">
+          <form id="contactBox" encType="multipart/form-data" method="post">
             <div className="form-row">
-              <div className="form-group col-12">
+              {/* <div className="form-group col-12">
                 <label htmlFor="name">Name</label>
                 <input className="form-control" id="name" placeholder="Name" name="name" onChange={handleInputChange} value={messageObject.name}/>
-              </div>
-              <div className="form-group col-12">
+              </div> */}
+              <Input 
+                onChange={handleInputChange}
+                name="name"
+                placeholder="Name"
+                value={messageObject.name}
+                id="name"
+              />
+              {/* <div className="form-group col-12">
                 <label htmlFor="email">Email</label>
                 <input
                   className="form-control"
@@ -56,8 +64,15 @@ function Contact() {
                   onChange={handleInputChange}
                   value={messageObject.email}
                 />
-              </div>
-              <div className="form-group col-12">
+              </div> */}
+              <Input 
+                onChange={handleInputChange}
+                name="email"
+                placeholder="example@example.com"
+                value={messageObject.email}
+                id="email"
+              />
+              {/* <div className="form-group col-12">
                 <label htmlFor="textArea">Message</label>
                 <textarea
                   className="form-control"
@@ -67,8 +82,15 @@ function Contact() {
                   onChange={handleInputChange}
                   value={messageObject.message}
                 ></textarea>
-              </div>
-              <button
+              </div> */}
+              <TextArea 
+                onChange={handleInputChange}
+                name="message"
+                placeholder="Enter your message here."
+                value={messageObject.message}
+                id="message"
+              />
+              {/* <button
                 type="submit"
                 className="btn-lg btn-warning mb-5"
                 id="subButton"
@@ -76,7 +98,13 @@ function Contact() {
                 onClick={handleFormSubmit}
               >
                 Submit
-              </button>
+              </button> */}
+              <FormBtn
+                onClick={handleFormSubmit}
+                value={messageObject}
+              >
+                Submit
+              </FormBtn>
             </div>
           </form>
 
