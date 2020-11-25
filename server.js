@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const bodyParser = require("body-parser");
+
 
 // Express instance
 const app = express();
@@ -11,14 +11,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 
 // If our node environment is production we will serve up our static assets from the build folder
 if (process.env.NODE_ENV === "production") {
@@ -30,12 +24,14 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Mongo DB Connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", 
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
+);
 
 // Start the server
 app.listen(PORT, () => {
