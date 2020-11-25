@@ -3,7 +3,7 @@
   ![GitHub](https://img.shields.io/github/license/k1te-m/React-Portfolio)![GitHub top language](https://img.shields.io/github/languages/top/k1te-m/React-Portfolio)
 
   ## Description
-  A React Applicaiton to display some quick information about myself along with my resume, LinkedIn profile, and GitHub repositories. 
+  A React application to display some quick information about myself along with my resume, LinkedIn profile, and GitHub repositories. 
 
   ## Table of Contents
   * [Installation](#installation)
