@@ -4,7 +4,7 @@ export default {
     getRepos: function() {
         return axios.get("/api/repos");
     },
-    sendMessage: function() {
-        return axios.post("/api/messages")
+    sendMessage: function(data) {
+        return axios.post("/api/messages", data)
     }
 }
