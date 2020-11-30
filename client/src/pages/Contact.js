@@ -46,19 +46,19 @@ function Contact() {
               <Input 
                 onChange={handleInputChange}
                 name="name"
-                placeholder="Example McExampleFace"
+                placeholder="Jane Smith"
                 value={messageObject.name}
               />
               <Input 
                 onChange={handleInputChange}
                 name="email"
-                placeholder="example@example.com"
+                placeholder="jsmith@example.com"
                 value={messageObject.email}
               />
               <TextArea 
                 onChange={handleInputChange}
                 name="message"
-                placeholder="Enter your message here..."
+                placeholder="Enter your message here!"
                 value={messageObject.message}
               />
               <FormBtn
