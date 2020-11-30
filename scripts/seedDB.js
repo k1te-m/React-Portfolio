@@ -7,10 +7,16 @@ mongoose.connect(
 );
 
 const repoSeed = [
+
     {
-        name: "Burger-Logger",
+        name: "EcommerceApp",
+        github: "oroth8",
+        imageURL: "./images/limit.png",
+    },
+    {
+        name: "Employee-Directory",
         github: "k1te-m",
-        imageURL: "./images/burger-logger.png",
+        imageURL: "./images/employee_direct.PNG"
     },
     {
         name: "Project-1-Restaurant-Roulette",
@@ -18,14 +24,24 @@ const repoSeed = [
         imageURL: "./images/rr-1.PNG",
     },
     {
+        name: "Budget-Tracker",
+        github: "k1te-m",
+        imageURL: "./images/budget-tracker.PNG"
+    },
+    {
+        name: "Employee-Tracker",
+        github: "k1te-m",
+        imageURL: "./images/EMS.PNG",
+    },
+    {
+        name: "Fitness-Tracker",
+        github: "k1te-m",
+        imageURL: "./images/fitness_tracker.PNG"
+    },
+    {
         name: "courseWork_06_weatherDashboard",
         github: "k1te-m",
         imageURL: "./images/weatherdemo.PNG",
-    },
-    {
-        name: "EcommerceApp",
-        github: "oroth8",
-        imageURL: "./images/limit.png",
     },
     {
         name: "courseWork_05_dayPlanner",
@@ -43,9 +59,9 @@ const repoSeed = [
         imageURL: "./images/notetaker.PNG",
     },
     {
-        name: "Employee-Tracker",
+        name: "Burger-Logger",
         github: "k1te-m",
-        imageURL: "./images/EMS.PNG",
+        imageURL: "./images/burger-logger.png",
     },
 ]
 
