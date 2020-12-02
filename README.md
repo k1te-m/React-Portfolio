@@ -22,7 +22,7 @@
 
   *Examples of project use:*
 
-  [https://km-port.herokuapp.com/](https://protected-fortress-86982.herokuapp.com/)
+  [https://km-port.herokuapp.com/](https://km-port.herokuapp.com/)
 
   ![Demo-Image](./client/public/images/demo.PNG)
 
